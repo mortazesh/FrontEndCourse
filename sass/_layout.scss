@@ -1,0 +1,146 @@
+.conatier{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    grid-template-columns: 300px 1000px;
+    grid-gap: 10px;;
+    .aside,.section{
+        height: auto;
+    }
+    .section{
+        .container1{
+            width: 100%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: repeat(3,320px);
+            grid-gap: 10px;
+            .item-container{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 320px;
+                height: 400px;
+                overflow: hidden;
+                background-color: $color-background;
+                box-shadow: 5px 10px 5px $color-shadow;
+                cursor: pointer;
+                margin: 5px;
+                border: 1px solid black;
+                border-radius: 25px;
+                .img-conatiner,.body-container{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    img{
+                        width: 100%;
+                        height: 350px;
+                    }
+                }
+                .body-container{
+                    position: relative;
+                    .overlay{
+                        position: relative;
+                        width: 100%;
+                        height: 280px;
+                        background-color: $color-background1;
+                        opacity: 0;
+                        transition: height linear 0.4s, opacity linear 0.2s;
+                    }
+                    .event-info{
+                        background-color: $color-background;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        padding: 8px;
+                        .title{
+                            color: $color-font;
+                            font-size: 1.5em;
+                            font-weight: bold;
+                            margin: 6px;
+                        }
+                        .info{
+                            margin-bottom: 2px;
+                        }
+                        .separator{
+                            width:20%;
+                            height: 6px;
+                            background-color: $color-background1;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .additional-info{
+                        background-color: $color-background;
+                        border-top: 1px solid $color-border;
+                        padding: 15px;
+                        padding-bottom: 0;
+                        .info{
+                            font-size: 0.9em;
+                            margin-bottom: 15px;
+                            text-align: center;
+                            i{
+                                color:$color-background1;
+                                margin-right: 4px;
+                            }
+                        }
+                    }
+                }
+                &:hover .overlay{
+                    opacity: 1;
+                    height: 150px;
+                }
+                &:hover .action{
+                    top: 50px;
+                }
+            }
+        }
+    }
+    .aside{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &>div{
+            width: 250px;
+            border: 1px solid $color-border;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: $color-background;
+            .title{
+                width: 100%;
+                font-size: 1.1em;
+                padding: 10px;
+                border-bottom: 1px solid black;
+                text-align: center;
+            }
+        }
+        .Price{
+            border-radius: 15px;
+            .range{
+                width: 100%;
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+        .Grouping{
+            margin-top: 25px;
+            border-radius: 15px;
+            &>div{
+                width: 100%;
+                margin: 15px 50px 0  0;
+                
+            }
+            .checkbox1{
+                margin-right: 100px;
+            }
+        }
+    }
+}

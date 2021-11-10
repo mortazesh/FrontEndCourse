@@ -1,0 +1,18 @@
+$color-background:#fff;
+$color-shadow:rgba(0,0,0,0.5);
+$color-background1:rgba(24,83,122,0.8);
+$color-font:#18537a;
+$color-border:#bbb;
+$color-background2:rgba(255,255,255,0.5);
+$color-button:rgba(0, 56, 177, 0.733);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(241, 241, 241);
+}
